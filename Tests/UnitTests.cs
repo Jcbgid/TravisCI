@@ -58,5 +58,15 @@ namespace TravisCILab
         }
 
 
+
+        [Test]
+        public void Pow()
+        {
+            Assert.AreEqual(Program.Power("1", "2"), 1);
+            Assert.AreEqual(Program.Power("2", "3"), 8);
+            Assert.AreEqual(Program.Power("3", "4"), 81);
+        }
+
+
     }
 }
