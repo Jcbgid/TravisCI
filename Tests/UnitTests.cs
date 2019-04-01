@@ -30,6 +30,33 @@ namespace TravisCILab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        // Implement 3 tests per operation, following a similar pattern as above
+
+        [Test]
+        public void Add()
+        {
+            Assert.AreEqual(Program.Add("1", "2"), 3);
+            Assert.AreEqual(Program.Add("2", "3"), 5);
+            Assert.AreEqual(Program.Add("3", "4"), 7);
+        }
+
+
+        [Test]
+        public void Mult()
+        {
+            Assert.AreEqual(Program.Multiply("1", "2"), 2);
+            Assert.AreEqual(Program.Multiply("2", "3"), 6);
+            Assert.AreEqual(Program.Multiply("3", "4"), 12);
+        }
+
+
+        [Test]
+        public void Subtract()
+        {
+            Assert.AreEqual(Program.Subtract("1", "2"), -1);
+            Assert.AreEqual(Program.Subtract("2", "3"), -1);
+            Assert.AreEqual(Program.Subtract("3", "4"), -1);
+        }
+
+
     }
 }
